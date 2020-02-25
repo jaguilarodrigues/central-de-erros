@@ -12,10 +12,9 @@ function Login() {
   const [senha, setSenha] = useState();
   const [msgTipo, setMsgTipo] = useState();
 
-
   function logar() {
     firebase.auth().signInWithEmailAndPassword(email, senha).then(resultado => {
-      setMsgTipo('sucesso')
+      setMsgTipo('sucesso');
     }).catch(erro => {
       setMsgTipo('erro')
     });
