@@ -21,7 +21,6 @@ body html{
   padding: 10px;
 }
 
-
 .form-signin {
   border-style: solid;
   border-width: 0px;
@@ -29,6 +28,9 @@ body html{
   min-width: 350px;
   padding: 40px 10px 40px 10px;
   background-color: #061e2d;
+}
+.strbemvindo{
+  color: #dd9d3c;
 }
 
 .btn-login {

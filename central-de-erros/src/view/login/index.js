@@ -27,9 +27,6 @@ function Login() {
 
   return (
     <div className="login-content">
-
-
-
       <div className="logo-content">
         <img className="logo" src={imagelogo} alt="logotipo" />
       </div>
@@ -37,7 +34,7 @@ function Login() {
       <form className="form-signin mx-auto">
         <div className="text-center mb-4">
           <h1 className="h3 mb-3 font-weight-normal text-white font-weight-bold"><i class="fa fa-lock"></i> Login</h1>
-          <h5 className="text-white">Central de Erros</h5>
+          <h5 className="text-white">Bem vindo à <strong className="strbemvindo">Central de Erros !</strong></h5>
         </div>
 
         <div class="input-group mb-3">
