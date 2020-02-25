@@ -16,3 +16,7 @@ $ yarn install firebase
 ```
 $ yarn add react-router-dom
 ```
+- dependencia para gerar toasts de Mensagens
+```
+$ yarn add react-toastify
+```
