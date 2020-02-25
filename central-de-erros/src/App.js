@@ -1,4 +1,6 @@
 import React from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 /* Páginas */
@@ -9,12 +11,14 @@ import Home from './view/home';
 
 function App() {
   return (
-    <Router>
-      <Route exact path='/' component={Login} />
-      <Route exact path='/novousuario' component={NovoUsuario} />
-      <Route exact path='/home' component={Home} />
-    </Router>
-
+    <>
+      <ToastContainer />
+      <Router>
+        <Route exact path='/' component={Login} />
+        <Route exact path='/novousuario' component={NovoUsuario} />
+        <Route exact path='/home' component={Home} />
+      </Router>
+    </>
   );
 }
 
