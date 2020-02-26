@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import './style.css';
+import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 import imagelogo from '../../images/buglogo.png'
-
 import firebase from '../../config/firebase';
 import 'firebase/auth';
-import { toast } from 'react-toastify';
+import './style.css';
 
 
 function Login() {
@@ -54,8 +54,9 @@ function Login() {
         <button onClick={logar} className="btn-login btn btn-lg btn-block" type="button">Logar</button>
       </form>
 
-      <div className="opcoes-login text-center">
-        <a href="#" className="mx-2">Esqueceu sua senha ?</a>
+      <div className="opcoes-login">
+        <Link to='usuariorecuperarsenha' className="mx-2">Esqueceu sua senha ?</Link>
+        <Link to='novousuario' className="mx-2">Quero Cadastrar</Link>
       </div>
     </div >
   );

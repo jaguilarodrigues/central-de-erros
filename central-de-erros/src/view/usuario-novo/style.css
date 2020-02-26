@@ -14,12 +14,12 @@ body{
   max-width: 650px;
  }
 
- .btn-cadastro{
-   background-color: #614EA6;
-   color: #ffffff;
- }
+ .btn-cadastro {
+  background-color: #cd683e;
+  color: #ffffff;
+}
 
- .btn-cadastro:hover{
-  background-color: #F21667;
+.btn-cadastro:hover{
+  background-color: #c23439;
   color: #ffffff;
 }

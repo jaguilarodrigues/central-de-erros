@@ -43,10 +43,11 @@ body html{
   color: #ffffff;
 }
 
-
 .opcoes-login{
+  text-align: end;
+  font-size: 14px;
   margin: 0px;
-  padding: 12px 0px 0px 0px;
+  padding: 12px 10px 0px 0px;
   background-color: #3d464b;
   min-width: 350px;
   height: 50px;
