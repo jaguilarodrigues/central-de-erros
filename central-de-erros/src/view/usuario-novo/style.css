@@ -1,18 +1,46 @@
-body{
+body html{
   padding: 0;
   margin: 0;
+  font-family: 'Roboto';
 }
+
+.label-cadastro{
+  background-color: #061e2d;
+}
+
 .form-cadastro {
   display: flex;
   flex-direction: column;
+  justify-content: first baseline;
   align-items: center;
-  justify-content: center;
-  background-color: #666666;
+  width: 100vw;
+  height: 100vh;
+  background-color: #071e2d; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, #525557aa,#a7acaf); 
+  font-family: 'Roboto';
+}
+
+.label-cadastro h3{
+  font-size: 27px;
+}
+
+.label-cadastro i{
+  font-size: 30px;
+  color: #dd9d3c;
+}
+
+.label-cadastro hr{
+  border: solid 0.25px #ffffff;
 }
 
 .form-login{
-  max-width: 650px;
- }
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 9px 9px 9px 9px;
+  min-width: 400px;
+  padding: 30px 10px 10px 10px;
+  background-color: #061e2d;
+}
 
  .btn-cadastro {
   background-color: #cd683e;
