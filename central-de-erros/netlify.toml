@@ -1,8 +1,8 @@
 [build]
   command = "npm run build"
-  publish="central-de-erros/build"
-  base = "central-de-erros"
-
+  base = "central-de-erros/"
+  publish="central-de-erros/build/"
+  
 [[redirects]]
   from = "/*"
   to = "/index.html"
