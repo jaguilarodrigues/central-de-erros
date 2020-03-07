@@ -1,7 +1,7 @@
 [build]
+  base = "central-de-erros/central-de-erros/"
   command = "npm run build"
-  base = "central-de-erros/"
-  publish="central-de-erros/build/"
+  publish="central-de-erros/central-de-erros/build/"
   
 [[redirects]]
   from = "/*"
