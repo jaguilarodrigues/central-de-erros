@@ -1,0 +1,33 @@
+.principal {
+  width: 80%;
+  margin: 20px auto;
+  background-color: #061e2d;
+  padding-bottom: 50px;
+  color: #dd9937;
+}
+
+.headers {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: teal;
+  text-align: center;
+  margin: 0 auto;
+}
+.card {
+  padding: 25px;
+}
+.card button {
+  background-color: #cd683e;
+}
+.img {
+  width: 4rem;
+  margin-right: 25px;
+}

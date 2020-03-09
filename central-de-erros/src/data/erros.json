@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "ambiente": "producao",
+    "erros": [
+      {
+        "id": 1,
+        "level": "error",
+        "descricao": "PRODUÇÃO.Error: acceleration.Service.AddCandidate:acceleration.MongoRepository.Add",
+        "origem": "app.server.com.br",
+        "eventos": 200
+      },
+      {
+        "id": 2,
+        "level": "wanring",
+        "descricao": "PRODUÇÃO.Warning: user.Service.Auth:Password.Password.Compare:crypto/bcrypt:hashed",
+        "origem": "127.0.1.1",
+        "eventos": 1300
+      },
+      {
+        "id": 3,
+        "level": "debug",
+        "descricao": "PRODUÇÃO.Debug: acceleration.Detail:<not_found",
+        "origem": "10.0.1.1",
+        "eventos": 34
+      }
+    ],
+    "created_at": 1563285424468
+  },
+  {
+    "id": 2,
+    "ambiente": "homologacao",
+    "erros": [
+      {
+        "id": 1,
+        "level": "error",
+        "descricao": "HOMOLOGACAO.Error:acceleration.Service.AddCandidate:acceleration.MongoRepository.Add",
+        "origem": "app.server.com.br",
+        "eventos": 67
+      },
+      {
+        "id": 2,
+        "level": "wanring",
+        "descricao": "HOMOLOGACAO.Warning:user.Service.Auth:Password.Password.Compare:crypto/bcrypt:hashed",
+        "origem": "127.0.1.1",
+        "eventos": 349
+      },
+      {
+        "id": 3,
+        "level": "debug",
+        "descricao": "HOMOLOGACAO.Debug:acceleration.Detail:<not_found",
+        "origem": "10.0.1.1",
+        "eventos": 982
+      }
+    ],
+    "created_at": 1563285424468
+  },
+  {
+    "id": 3,
+    "ambiente": "dev",
+    "erros": [
+      {
+        "id": 1,
+        "level": "error",
+        "descricao": "DEV.Error: acceleration.Service.AddCandidate:acceleration.MongoRepository.Add",
+        "origem": "app.server.com.br",
+        "eventos": 1560
+      },
+      {
+        "id": 2,
+        "level": "wanring",
+        "descricao": "DEV.Warning: user.Service.Auth:Password.Password.Compare:crypto/bcrypt:hashed",
+        "origem": "127.0.1.1",
+        "eventos": 402
+      },
+      {
+        "id": 3,
+        "level": "debug",
+        "descricao": "DEV.Debug: acceleration.Detail:<not_found",
+        "origem": "10.0.1.1",
+        "eventos": 602
+      }
+    ],
+    "created_at": 1563285424468,
+    "total_replies": 0
+  }
+]

@@ -1,0 +1,39 @@
+.filters {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 20px 40px;
+}
+
+.option-itens {
+  background-color: blueviolet;
+  margin-right: 50px;
+}
+.option-itens select {
+  width: 200px;
+}
+
+.buttons {
+  display: flex;
+  background-color: cadetblue;
+}
+
+.button-itens {
+  display: flex;
+  width: 100px;
+  justify-content: center;
+  margin: 20px 40px;
+}
+.table {
+  text-align: center;
+}
+
+.table2 {
+  display: grid;
+  grid-template-columns: minmax(50px, 150px) 4fr 1fr;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
