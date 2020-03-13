@@ -1,9 +1,14 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 import "./index.css";
 
 function BodyTable({ level, descricao, eventos }) {
+  // const { erroAmbiente } = useSelector(({ erros }) => erros);
+
+  // console.log("erroAmbiente", erroAmbiente);
   return (
     <div>
+      {/* {erroAmbiente.map(err => ( */}
       <table className="table">
         <tbody>
           <tr className="table2">
@@ -16,6 +21,7 @@ function BodyTable({ level, descricao, eventos }) {
           </tr>
         </tbody>
       </table>
+      {/* ))} */}
     </div>
   );
 }

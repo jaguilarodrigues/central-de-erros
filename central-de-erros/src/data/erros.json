@@ -20,9 +20,16 @@
       {
         "id": 3,
         "level": "debug",
-        "descricao": "PRODUÇÃO.Debug: acceleration.Detail:<not_found",
+        "descricao": "PRODUÇÃO.Debug: acceleration.Detail:<not_found>",
         "origem": "10.0.1.1",
         "eventos": 34
+      },
+      {
+        "id": 4,
+        "level": "debug",
+        "descricao": "PRODUÇÃO.Debug:  user.Service.Auth:Password",
+        "origem": "10.0.1.253",
+        "eventos": 56
       }
     ],
     "created_at": 1563285424468

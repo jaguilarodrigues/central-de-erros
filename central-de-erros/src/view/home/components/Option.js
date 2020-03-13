@@ -1,6 +1,13 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 
-function Option({ opcao1, opcao2, opcao3, handleSelected }) {
+function Option({ opcao1, opcao2, opcao3 }) {
+  const dispatch = useDispatch();
+
+  const handleSelected = e => {
+    dispatch({ type: "GET_OPTION", payload: e.target.value });
+  };
+
   return (
     <div className="option-itens">
       <select onChange={handleSelected}>
