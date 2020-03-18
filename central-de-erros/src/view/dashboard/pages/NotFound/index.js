@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import { Button, ButtonGroup } from "../../components/Button";
-import { Card, CardHeader } from "../../components/Card";
+import { Card, CardHeader, CardBody } from "../../components/Card";
 import Filter from "../../components/Filter";
 
 function NotFound() {
@@ -24,16 +24,17 @@ function NotFound() {
       <CardHeader>
         <Link to="/Login">sair</Link>
         <h4>Bem vindo usuário</h4>
-        {/* <FilterArea onChangeLink={handleSelected} /> */}
         <Filter onChangeLink={handleSelected} />
+
         <ButtonGroup>
           <Button>Arquivar </Button>
           <Button>Apagar</Button>
         </ButtonGroup>
       </CardHeader>
-
-      <h2>Pagina não encontrada</h2>
-      <Link to="/producao">voltar</Link>
+      <CardBody>
+        <h2>Pagina não encontrada</h2>
+        <Link to="/producao">voltar</Link>
+      </CardBody>
     </Card>
   );
 }

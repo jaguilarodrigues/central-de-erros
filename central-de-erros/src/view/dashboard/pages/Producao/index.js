@@ -4,9 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import api from "../../../../api";
 import { formatDate } from "../../../../utils";
 import { Button, ButtonGroup } from "../../components/Button";
-import { Card, CardHeader } from "../../components/Card";
-import TableBody from "../../components/Table";
-import HeaderTable from "../../components/HeaderTable";
+import { Card, CardHeader, CardBody } from "../../components/Card";
+import { TableBody, TableHead } from "../../components/Table";
 import Filter from "../../components/Filter";
 import Loading from "../../components/Loading";
 
@@ -43,28 +42,30 @@ export default function Producao() {
       <CardHeader>
         <Link to="/Login">sair</Link>
         <h4>Bem vindo usuário</h4>
-        {/* <FilterArea onChangeLink={handleSelected} /> */}
         <Filter onChangeLink={handleSelected} />
+
         <ButtonGroup>
           <Button>Arquivar </Button>
           <Button>Apagar</Button>
         </ButtonGroup>
       </CardHeader>
-      <HeaderTable />
+      <CardBody>
+        <TableHead />
 
-      {loading ? (
-        <Loading />
-      ) : (
-        erroProducao.map(err => (
-          <TableBody
-            level={err.level}
-            descricao={err.descricao}
-            origem={err.origem}
-            data={formatDate(err.data)}
-            eventos={err.eventos}
-          />
-        ))
-      )}
+        {loading ? (
+          <Loading />
+        ) : (
+          erroProducao.map(err => (
+            <TableBody
+              level={err.level}
+              descricao={err.descricao}
+              origem={err.origem}
+              data={formatDate(err.data)}
+              eventos={err.eventos}
+            />
+          ))
+        )}
+      </CardBody>
     </Card>
   );
 }

@@ -5,9 +5,8 @@ import { useHistory } from "react-router-dom";
 import api from "../../../../api";
 import { formatDate } from "../../../../utils";
 import { Button, ButtonGroup } from "../../components/Button";
-import { Card, CardHeader } from "../../components/Card";
-import TableBody from "../../components/Table";
-import HeaderTable from "../../components/HeaderTable";
+import { Card, CardHeader, CardBody } from "../../components/Card";
+import { TableBody, TableHead } from "../../components/Table";
 import Filter from "../../components/Filter";
 import Loading from "../../components/Loading";
 
@@ -48,21 +47,25 @@ export default function Homologação() {
           <Button>Apagar</Button>
         </ButtonGroup>
       </CardHeader>
-      <HeaderTable />
+      <CardBody>
+        <TableHead />
 
-      {loading ? (
-        <Loading />
-      ) : (
-        erroHomologacao.map(err => (
-          <TableBody
-            level={err.level}
-            descricao={err.descricao}
-            origem={err.origem}
-            data={formatDate(err.data)}
-            eventos={err.eventos}
-          />
-        ))
-      )}
+        {loading ? (
+          <Loading />
+        ) : (
+          erroHomologacao.map((err, index) => (
+            <TableBody
+              index={index}
+              key={err.id}
+              level={err.level}
+              descricao={err.descricao}
+              origem={err.origem}
+              data={formatDate(err.data)}
+              eventos={err.eventos}
+            />
+          ))
+        )}
+      </CardBody>
     </Card>
   );
 }
