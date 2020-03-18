@@ -18,18 +18,19 @@ export default function Dev() {
     api().then(datas => {
       dispatch({ type: "GET_ERROS", payload: datas });
     });
-  }, []);
+  }, [dispatch]);
 
   const handleSelected = e => {
     const valor = e.target.value;
     console.log(valor);
-    if (valor == 0) {
+    console.log(typeof valor);
+    if (e.target.value === "0") {
       history.push("/producao");
     }
-    if (valor == 1) {
+    if (e.target.value === "1") {
       history.push("/homologacao");
     }
-    if (valor == 2) {
+    if (e.target.value === "2") {
       history.push("/dev");
     }
   };

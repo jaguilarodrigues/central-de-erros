@@ -1,16 +1,11 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect
-} from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 /* Páginas */
 import Login from "../view/login";
 import NovoUsuario from "../view/usuario-novo";
 import UsuarioRecuperarSenha from "../view/usuario-recuperar-senha";
-import Home from "../view/dashboard";
+// import Home from "../view/dashboard";
 import Producao from "../view/dashboard/pages/Producao";
 import Homologação from "../view/dashboard/pages/Homologacao";
 import Dev from "../view/dashboard/pages/Dev";

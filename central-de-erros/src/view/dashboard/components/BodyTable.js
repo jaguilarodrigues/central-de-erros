@@ -1,5 +1,4 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
 import "./index.css";
 
 function BodyTable({ level, descricao, eventos }) {
