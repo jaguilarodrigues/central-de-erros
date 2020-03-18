@@ -2,14 +2,18 @@
   background-color: aquamarine;
   display: flex;
   justify-content: space-between;
-
   padding: 20px 40px;
+}
+.search {
+  display: flex;
+  align-items: center;
 }
 
 .option-itens {
   background-color: blueviolet;
   margin-right: 50px;
 }
+
 .option-itens select {
   width: 200px;
 }

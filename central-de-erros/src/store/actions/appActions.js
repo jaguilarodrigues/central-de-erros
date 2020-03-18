@@ -10,5 +10,3 @@ export const getErros = erroObj => {
     payload: erroObj
   };
 };
-
-// export default { loadingAction, getErros };

@@ -1,12 +1,12 @@
 const initialState = {
   erroList: [],
-  loading: false,
-  option: 0,
-  erroAmbiente: []
+  loading: true,
+  erroHomologacao: [],
+  erroProducao: [],
+  erroDev: []
 };
 
 const ErrosReducer = (state = initialState, action) => {
-  const { type, item } = action;
   switch (action.type) {
     case "LOADING":
       return {
@@ -14,23 +14,17 @@ const ErrosReducer = (state = initialState, action) => {
       };
 
     case "GET_ERROS":
-      const erros = action.payload;
-      const ambientErrors = erros[0].erros;
+      const erro = action.payload;
+      const producaoErrors = erro[0].erros;
+      const homologacaoErrors = erro[1].erros;
+      const devErrors = erro[2].erros;
       return {
         ...state,
-        erroList: erros,
-        erroAmbiente: ambientErrors,
+        erroList: erro,
+        erroProducao: producaoErrors,
+        erroHomologacao: homologacaoErrors,
+        erroDev: devErrors,
         loading: false
-      };
-    case "GET_OPTION":
-      const position = action.payload;
-      const ambientList = state.erroList[position].ambiente;
-      const ambientErrorsOption = state.erroList[position].erros;
-      return {
-        ...state,
-        option: position,
-        ambientes: ambientList,
-        erroAmbiente: ambientErrorsOption
       };
     default:
       return state;
