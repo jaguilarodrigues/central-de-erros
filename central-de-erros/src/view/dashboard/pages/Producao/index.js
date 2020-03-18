@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-
 import api from "../../../../api";
-import FilterArea from "../../components/FilterArea";
-import Buttons from "../../components/Buttons";
+import { formatDate } from "../../../../utils";
+import { Button, ButtonGroup } from "../../components/Button";
+import { Card, CardHeader } from "../../components/Card";
+import TableBody from "../../components/Table";
 import HeaderTable from "../../components/HeaderTable";
-import BodyTable from "../../components/BodyTable";
+import Filter from "../../components/Filter";
 import Loading from "../../components/Loading";
 
 export default function Producao() {
@@ -38,25 +39,32 @@ export default function Producao() {
   console.log("loading", loading);
 
   return (
-    <div>
-      <Link to="/Login">sair</Link>
-      <h4>Bem vindo usuário</h4>
-      <FilterArea onChangeLink={handleSelected} />
-
-      <Buttons />
+    <Card>
+      <CardHeader>
+        <Link to="/Login">sair</Link>
+        <h4>Bem vindo usuário</h4>
+        {/* <FilterArea onChangeLink={handleSelected} /> */}
+        <Filter onChangeLink={handleSelected} />
+        <ButtonGroup>
+          <Button>Arquivar </Button>
+          <Button>Apagar</Button>
+        </ButtonGroup>
+      </CardHeader>
       <HeaderTable />
 
       {loading ? (
         <Loading />
       ) : (
         erroProducao.map(err => (
-          <BodyTable
+          <TableBody
             level={err.level}
             descricao={err.descricao}
+            origem={err.origem}
+            data={formatDate(err.data)}
             eventos={err.eventos}
           />
         ))
       )}
-    </div>
+    </Card>
   );
 }
